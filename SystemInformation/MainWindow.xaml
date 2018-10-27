@@ -1,0 +1,67 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemInformation"
+        xmlns:ViewModel="clr-namespace:SI.ViewModel" x:Class="SI.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="371.473" Width="386.97">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+    <Grid Height="520" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="379" Margin="0,0,0,-180" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="284,105,0,0" VerticalAlignment="Top" Width="75" Click="Refresh_Click" Height="20"/>
+
+
+        <TextBlock x:Name="txtUpdateStatus" HorizontalAlignment="Left" Margin="15,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344"/>
+
+
+        <TextBlock x:Name="txtblockCPU" HorizontalAlignment="Left" Margin="157,48,0,0" TextWrapping="Wrap" Text="{Binding CPU, Mode=OneWay}" VerticalAlignment="Top" Height="21" Width="158"/>
+        <Label x:Name="lblCPU" Content="{Binding CPULabel, Mode=OneWay}" HorizontalAlignment="Left" Margin="13,43,0,0" VerticalAlignment="Top" Width="139" Height="26"/>
+        <TextBlock x:Name="txtblockMemoryCommitted" HorizontalAlignment="Left" Margin="222,79,-1,0" TextWrapping="Wrap" Text="{Binding MemoryCommitted, Mode=OneWay}" VerticalAlignment="Top" Height="21" Width="158"/>
+        <Label x:Name="lblMemoryCommitted" Content="{Binding MemoryCommittedLabel, Mode=OneWay}"  HorizontalAlignment="Left" Margin="13,74,0,0" VerticalAlignment="Top" Width="218" Height="26"/>
+        <Label x:Name="lblNumberOfProcess" Content="{Binding ProccessNumberLabel, Mode=OneWay}" Margin="13,100,276,109" />
+        <TextBlock x:Name="txtNumberOfProccess" Text="{Binding ProccessNumber, Mode=OneWay}" Margin="100,105,227,109" />
+
+
+        <Label Content="Enter URL address" HorizontalAlignment="Left" Margin="9,166,0,0" VerticalAlignment="Top" Height="26" Width="106"/>
+        <TextBox x:Name="txtboxURL" HorizontalAlignment="Left" Height="22" Margin="13,189,0,0"   TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="346"/>
+        <Button x:Name="btn_CheckURLValid" Cursor="Hand" Content="Check url" HorizontalAlignment="Left" Margin="287,213,0,0" VerticalAlignment="Top" Width="72" AutomationProperties.HelpText="Check if the URL is valid" Click="CheckIfURLIsValid" Height="20">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="IsEnabled" Value="True" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=txtboxURL}" Value="">
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock x:Name="txtblckIsURLValid" HorizontalAlignment="Left" Margin="15,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="20"/>
+
+
+        <Label Content="Enter path" HorizontalAlignment="Left" Margin="12,5,0,0" VerticalAlignment="Top" Height="31" Width="65" Grid.Row="1"/>
+        <TextBox x:Name="txtboxDicPath" Height="22" Margin="13,27,0,0"   TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="346" Grid.Row="1"/>
+        <Button x:Name="btn_CheckPathExists"  Content="Check path" HorizontalAlignment="Left" Margin="287,52,0,0" VerticalAlignment="Top" Width="72" AutomationProperties.HelpText="Check if the Path is exists" Click="IsPathExists" Height="20" Grid.Row="1">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="IsEnabled" Value="True" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=txtboxDicPath}" Value="">
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock x:Name="txtblckIsPathExits" Margin="13,51,97,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Grid.Row="1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+﻿<Application x:Class="SystemInformation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SystemInformation"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <local:SI.ViewModel.MainView x:Key="MainView" />
+    </Application.Resources>
+</Application>

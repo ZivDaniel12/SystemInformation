@@ -1,0 +1,16 @@
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.WPF.csprojAssemblyReference.cache
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\MainWindow.g.cs
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\App.g.cs
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\MainWindow.baml
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.WPF.csproj.GenerateResource.cache
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.WPF.csproj.CoreCompileInputs.cache
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\bin\Debug\SI.exe.config
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\bin\Debug\SI.exe
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\bin\Debug\SI.pdb
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI_MarkupCompile.cache
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI_MarkupCompile.lref
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.g.resources
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.Properties.Resources.resources
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.exe
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\SI.pdb
+C:\Users\zivdanix\source\repos\SystemInformation\SystemInformation\obj\Debug\GeneratedInternalTypeHelper.g.cs
